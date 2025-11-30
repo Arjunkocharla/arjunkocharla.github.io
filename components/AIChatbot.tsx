@@ -150,6 +150,9 @@ Answer questions about Arjun's skills, experience, and capabilities in a friendl
       // If API returns error, fall through to fallback
       throw new Error('API error')
     } catch (error) {
+      // Log error for debugging
+      console.error('Chat error:', error)
+      
       // Fallback: Client-side responses when API fails
       const getFallbackResponse = (userMessage: string): string => {
         const lowerMessage = userMessage.toLowerCase()
@@ -219,15 +222,6 @@ What would you like to know?`
       }
 
       setMessages((prev) => [...prev, assistantMessage])
-      console.error('Chat error:', error)
-      const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        content:
-          "I'm having trouble connecting right now. Please try again later, or feel free to reach out directly through the contact form!",
-        timestamp: new Date(),
-      }
-      setMessages((prev) => [...prev, errorMessage])
     } finally {
       setIsLoading(false)
     }
