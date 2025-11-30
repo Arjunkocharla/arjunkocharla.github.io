@@ -27,7 +27,8 @@ export default function Home() {
     <main className="relative min-h-screen">
       <ParticleBackground />
       <Navigation />
-      <PortfolioGuide />
+      {/* PortfolioGuide hidden - using InteractiveNavigator instead */}
+      {/* <PortfolioGuide /> */}
       <AIChatbot />
       <InteractiveNavigator />
       <Hero />
