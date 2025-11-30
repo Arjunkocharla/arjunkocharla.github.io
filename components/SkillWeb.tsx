@@ -54,7 +54,7 @@ export default function SkillWeb({ skills }: SkillWebProps) {
     let animationFrame: number
 
     function animate() {
-      if (!ctx) return
+      if (!ctx || !canvas) return
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 

@@ -121,11 +121,14 @@ export default function About() {
                 key={feature.title}
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 0.6 + index * 0.1,
+                  rotate: { duration: 0.5 }
+                }}
                 className="glass p-6 rounded-xl text-center hover:bg-white/10 transition-colors morph-section cursor-pointer"
                 whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0], y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ rotate: { duration: 0.5 } }}
               >
                 <div className="inline-block p-4 bg-primary-500/20 rounded-full mb-4">
                   <Icon size={32} className="text-primary-400" />

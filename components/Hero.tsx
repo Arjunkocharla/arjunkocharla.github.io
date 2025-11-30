@@ -33,7 +33,6 @@ export default function Hero() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="inline-block"
                 whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
-                transition={{ duration: 0.3 }}
               >
                 Hi, I'm{' '}
               </motion.span>
