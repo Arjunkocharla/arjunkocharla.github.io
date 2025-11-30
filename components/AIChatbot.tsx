@@ -149,8 +149,8 @@ Answer questions about Arjun's skills, experience, and capabilities in a friendl
 
       // If API returns error, fall through to fallback
       throw new Error('API error')
-    } catch (apiError) {
-      // Fallback: Client-side responses
+    } catch (error) {
+      // Fallback: Client-side responses when API fails
       const getFallbackResponse = (userMessage: string): string => {
         const lowerMessage = userMessage.toLowerCase()
 
@@ -207,19 +207,18 @@ He's always open to discussing new projects and opportunities!`
 What would you like to know?`
       }
 
-        // Simulate API delay for better UX
-        await new Promise(resolve => setTimeout(resolve, 500))
-        
-        const fallbackResponse = getFallbackResponse(input)
-        const assistantMessage: Message = {
-          id: (Date.now() + 1).toString(),
-          role: 'assistant',
-          content: fallbackResponse,
-          timestamp: new Date(),
-        }
+      // Simulate API delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 500))
+      
+      const fallbackResponse = getFallbackResponse(input)
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: fallbackResponse,
+        timestamp: new Date(),
+      }
 
-        setMessages((prev) => [...prev, assistantMessage])
-    } catch (error) {
+      setMessages((prev) => [...prev, assistantMessage])
       console.error('Chat error:', error)
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
