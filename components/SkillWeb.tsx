@@ -193,7 +193,7 @@ export default function SkillWeb({ skills }: SkillWebProps) {
   }, [skills, hoveredSkill, selectedSkill, hasInteracted])
 
   return (
-    <div className="relative w-full h-[500px] glass rounded-2xl overflow-hidden">
+    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] glass rounded-2xl overflow-hidden">
       <canvas
         ref={canvasRef}
         className="w-full h-full cursor-pointer"

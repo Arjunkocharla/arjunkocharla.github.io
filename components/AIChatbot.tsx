@@ -252,7 +252,7 @@ What would you like to know?`
             setIsOpen(true)
             setHasInteracted(true)
           }}
-          className="fixed bottom-6 right-6 z-50 p-4 glass rounded-full shadow-lg hover:bg-primary-500/20 transition-colors group"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 p-3 sm:p-4 glass rounded-full shadow-lg hover:bg-primary-500/20 transition-colors group"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -282,7 +282,7 @@ What would you like to know?`
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-6 right-6 z-50 w-96 h-[600px] glass rounded-2xl shadow-2xl backdrop-blur-xl flex flex-col overflow-hidden"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-96 max-w-[calc(100vw-2rem)] sm:max-w-none h-[calc(100vh-8rem)] sm:h-[600px] max-h-[600px] glass rounded-2xl shadow-2xl backdrop-blur-xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="p-4 border-b border-white/10 flex items-center justify-between">

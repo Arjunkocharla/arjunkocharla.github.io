@@ -37,7 +37,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-32 px-6 section-morph"
+      className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 section-morph"
     >
       <div className="container mx-auto max-w-6xl">
         <motion.div
@@ -47,10 +47,10 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             About <ClickableTitle className="gradient-text">Me</ClickableTitle>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Software Engineer with extensive experience in building high quality mobile and web applications across multitude of frameworks and languages.
           </p>
         </motion.div>
@@ -60,15 +60,15 @@ export default function About() {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="glass p-8 rounded-2xl morph-section"
+            className="glass p-4 sm:p-6 md:p-8 rounded-2xl morph-section"
             whileHover={{ scale: 1.02 }}
           >
-            <h3 className="text-2xl font-bold mb-4">My Journey</h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">My Journey</h3>
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-3 sm:mb-4">
               Software Engineer with 6+ years of experience building high quality
               mobile and web applications and high-performance backend systems for multinational companies.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
               I've worked across startups and enterprise environments, designing and delivering
               distributed systems, AI-powered tools, and interactive products that balance
               reliability, performance, and developer experience.
@@ -79,10 +79,10 @@ export default function About() {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="glass p-8 rounded-2xl morph-section"
+            className="glass p-4 sm:p-6 md:p-8 rounded-2xl morph-section"
             whileHover={{ scale: 1.02 }}
           >
-            <h3 className="text-2xl font-bold mb-4">What I Do</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">What I Do</h3>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               {[
                 { text: 'Design and build distributed backend systems and APIs that scale', emoji: '🕸️' },
@@ -121,7 +121,7 @@ export default function About() {
           className="glass p-8 rounded-2xl morph-section mt-16 space-y-8"
         >
           <div className="flex items-baseline justify-between gap-4 flex-wrap">
-            <h3 className="text-2xl font-bold">Experience Timeline</h3>
+            <h3 className="text-xl sm:text-2xl font-bold">Experience Timeline</h3>
           </div>
 
           {/* Professional Experience */}

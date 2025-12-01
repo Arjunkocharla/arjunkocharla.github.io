@@ -153,7 +153,7 @@ export default function InteractiveNavigator() {
   }
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-2rem)] sm:w-auto max-w-[calc(100vw-2rem)] sm:max-w-none px-2 sm:px-0">
       {!hasStarted && !showMenu ? (
         <motion.button
           initial={{ scale: 0, rotate: -180 }}
@@ -161,7 +161,7 @@ export default function InteractiveNavigator() {
           whileHover={{ scale: 1.1, rotate: 5 }}
           whileTap={{ scale: 0.9 }}
           onClick={handleStart}
-          className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full text-white font-bold text-lg shadow-2xl flex items-center gap-3 hover:shadow-primary-500/50 transition-all"
+          className="px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full text-white font-bold text-base sm:text-lg shadow-2xl flex items-center gap-2 sm:gap-3 hover:shadow-primary-500/50 transition-all w-full sm:w-auto justify-center"
         >
           <Play size={24} fill="white" />
           <span>Start Tour</span>
@@ -171,7 +171,7 @@ export default function InteractiveNavigator() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="glass rounded-2xl p-4 backdrop-blur-xl shadow-2xl"
+          className="glass rounded-2xl p-3 sm:p-4 backdrop-blur-xl shadow-2xl w-full"
         >
           {/* Header with Close Button */}
           <div className="flex items-center justify-between mb-4">
@@ -290,7 +290,7 @@ export default function InteractiveNavigator() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2 glass rounded-2xl p-6 backdrop-blur-xl shadow-2xl min-w-[300px]"
+            className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2 glass rounded-2xl p-4 sm:p-6 backdrop-blur-xl shadow-2xl w-[calc(100vw-4rem)] sm:w-auto sm:min-w-[300px] max-w-[calc(100vw-4rem)] sm:max-w-none"
           >
             <h3 className="text-lg font-bold mb-4 text-center gradient-text">
               Navigate Sections

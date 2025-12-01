@@ -126,7 +126,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-32 px-6 section-morph"
+      className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 section-morph"
     >
       <div className="container mx-auto max-w-6xl">
         <motion.div
@@ -136,10 +136,10 @@ export default function Skills() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             My <ClickableTitle className="gradient-text">Skills</ClickableTitle>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             A map of the technologies I use day-to-day. Hover over the interactive web to explore,
             or browse the detailed skill cards below.
           </p>
@@ -166,11 +166,11 @@ export default function Skills() {
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              className="glass p-8 rounded-2xl morph-section"
+              className="glass p-4 sm:p-6 md:p-8 rounded-2xl morph-section"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <span className="text-3xl">{category.icon}</span>
-                <h3 className="text-2xl font-bold gradient-text">
+              <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <span className="text-2xl sm:text-3xl">{category.icon}</span>
+                <h3 className="text-xl sm:text-2xl font-bold gradient-text">
                   {category.title}
                 </h3>
               </div>

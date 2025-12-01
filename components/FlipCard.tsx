@@ -27,7 +27,7 @@ export default function FlipCard({
 
   return (
     <div
-      className="h-[400px] perspective-1000"
+      className="h-[350px] sm:h-[400px] perspective-1000"
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <motion.div
@@ -39,7 +39,7 @@ export default function FlipCard({
         {/* Front of card */}
         <div className="absolute inset-0 backface-hidden">
             <motion.div
-              className="glass h-full rounded-2xl p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-white/10 transition-all relative overflow-hidden group"
+              className="glass h-full rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-white/10 transition-all relative overflow-hidden group"
               whileHover={{ scale: 1.02 }}
             >
               {/* Animated background gradient on hover */}
@@ -55,7 +55,7 @@ export default function FlipCard({
                 }}
               />
             <motion.div
-              className="text-7xl mb-6 relative z-10"
+              className="text-5xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 relative z-10"
               animate={{ 
                 rotate: isFlipped ? 180 : 0,
                 scale: [1, 1.1, 1],
@@ -71,7 +71,7 @@ export default function FlipCard({
             >
               {image}
             </motion.div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900 dark:text-white">{title}</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-center text-gray-900 dark:text-white px-2">{title}</h3>
             <motion.div
               className="mt-4 px-4 py-2 glass rounded-lg"
               initial={{ opacity: 0 }}
@@ -91,12 +91,12 @@ export default function FlipCard({
           style={{ transform: 'rotateY(180deg)' }}
         >
           <motion.div
-            className="glass h-full rounded-2xl p-6 flex flex-col cursor-pointer hover:bg-white/10 transition-all"
+            className="glass h-full rounded-2xl p-4 sm:p-6 flex flex-col cursor-pointer hover:bg-white/10 transition-all"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="text-5xl mb-4 text-center">{image}</div>
-            <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">{title}</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed flex-1">
+            <div className="text-4xl sm:text-5xl mb-3 sm:mb-4 text-center">{image}</div>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">{title}</h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed flex-1">
               {description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">

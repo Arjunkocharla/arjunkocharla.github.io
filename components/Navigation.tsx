@@ -34,7 +34,7 @@ export default function Navigation() {
         isScrolled ? 'glass py-4' : 'py-6'
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
         <motion.a
           href="#home"
           className="text-2xl font-bold gradient-text"

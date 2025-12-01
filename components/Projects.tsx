@@ -44,7 +44,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-32 px-6 section-morph"
+      className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 section-morph"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.div
@@ -54,10 +54,10 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Featured <ClickableTitle className="gradient-text">Projects</ClickableTitle>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             A collection of projects I've built, each with its own unique
             challenges and solutions.
           </p>

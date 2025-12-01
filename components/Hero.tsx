@@ -11,7 +11,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
           {/* Text Content */}
@@ -22,7 +22,7 @@ export default function Hero() {
             className="text-center md:text-left"
           >
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white cursor-default"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white cursor-default"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -51,7 +51,7 @@ export default function Hero() {
               </motion.span>
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-3 sm:mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -59,7 +59,7 @@ export default function Hero() {
               Software Engineer · AI & Distributed Systems
             </motion.p>
             <motion.p
-              className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
+              className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto md:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -70,7 +70,7 @@ export default function Hero() {
 
             {/* Social Links */}
             <motion.div
-              className="flex items-center justify-center md:justify-start gap-6 mb-8"
+              className="flex items-center justify-center md:justify-start gap-4 sm:gap-6 mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
@@ -186,7 +186,7 @@ export default function Hero() {
 
           {/* Interactive Demo */}
           <motion.div
-            className="hidden md:flex items-center justify-center h-[500px]"
+            className="hidden md:flex items-center justify-center h-[400px] lg:h-[500px]"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}

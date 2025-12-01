@@ -64,7 +64,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-32 px-6 section-morph"
+      className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 section-morph"
     >
       <div className="container mx-auto max-w-6xl">
         <motion.div
@@ -74,10 +74,10 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Get In <ClickableTitle className="gradient-text">Touch</ClickableTitle>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Have a project in mind? Let's work together to bring your ideas to
             life.
           </p>
@@ -91,9 +91,9 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="glass p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+            <div className="glass p-4 sm:p-6 md:p-8 rounded-2xl">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Let's Connect</h3>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 leading-relaxed">
                 I'm always open to discussing new projects, creative ideas, or
                 opportunities to be part of your vision. Feel free to reach out
                 through any of the channels below.
@@ -132,9 +132,9 @@ export default function Contact() {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="glass p-8 rounded-2xl"
+            className="glass p-4 sm:p-6 md:p-8 rounded-2xl"
           >
-            <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
