@@ -153,7 +153,7 @@ export default function InteractiveNavigator() {
   }
 
   return (
-    <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-2rem)] sm:w-auto max-w-[calc(100vw-2rem)] sm:max-w-none px-2 sm:px-0">
+    <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-40 w-[calc(100vw-2rem)] sm:w-auto max-w-[calc(100vw-2rem)] sm:max-w-none px-2 sm:px-0">
       {!hasStarted && !showMenu ? (
         <motion.button
           initial={{ scale: 0, rotate: -180 }}
