@@ -161,7 +161,7 @@ export default function InteractiveNavigator() {
           whileHover={{ scale: 1.1, rotate: 5 }}
           whileTap={{ scale: 0.9 }}
           onClick={handleStart}
-          className="px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-600 dark:to-primary-700 rounded-full text-white font-bold text-base sm:text-lg shadow-2xl flex items-center gap-2 sm:gap-3 hover:shadow-primary-500/50 dark:hover:shadow-primary-600/50 transition-all w-full sm:w-auto justify-center"
+          className="px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-500 dark:to-primary-600 rounded-full text-white dark:text-white font-bold text-base sm:text-lg shadow-2xl dark:shadow-primary-500/50 flex items-center gap-2 sm:gap-3 hover:shadow-primary-500/50 dark:hover:shadow-primary-600/50 transition-all w-full sm:w-auto justify-center"
         >
           <Play size={24} fill="white" />
           <span>Start Tour</span>
