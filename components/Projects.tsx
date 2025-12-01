@@ -7,31 +7,31 @@ import ClickableTitle from './ClickableTitle'
 
 const projects = [
   {
-    title: 'DCrypto - Financial Asset Management',
+    title: 'Resume Helper AI — Agentic Resume Platform',
     description:
-      'A Financial Services web application that lets users track and manage their cryptocurrency portfolio. Full-stack application with real-time portfolio tracking and visualization.',
-    technologies: ['Python', 'Web Application', 'Financial Tech', 'Backend'],
-    image: '💰',
-    github: 'https://github.com/Arjunkocharla/DCrypto',
-    live: 'https://dcrpyto.com/login',
-  },
-  {
-    title: 'Resume Helper AI',
-    description:
-      'A web app to supercharge your job search. AI-powered resume optimization and job search assistance tool built with modern web technologies.',
-    technologies: ['Python', 'JavaScript', 'AI/ML', 'Web App'],
+      'AI-powered resume optimization tool using React, Node.js, Python, Azure Functions, and Azure OpenAI. Implements agentic LLM workflows, embeddings, vector similarity scoring, and multi-step rewriting to evaluate job–resume fit and autonomously refine content.',
+    technologies: ['React', 'Node.js', 'Python', 'Azure Functions', 'Azure OpenAI', 'LLMs'],
     image: '📄',
     github: 'https://github.com/Arjunkocharla/resume-helper-ai',
     live: 'https://resumehelperapp.web.app/login',
   },
   {
-    title: 'Matching Engine',
+    title: 'Custom Order Book Engine — C++',
     description:
-      'High-performance C++ matching engine for order book management. Efficient order matching system with optimized algorithms for financial trading applications.',
-    technologies: ['C++', 'C', 'Trading Systems', 'Order Book'],
+      'High-performance limit order book written in modern C++, with cache-efficient data structures, custom memory pools, and lock-free ingestion using std::atomic and ring buffers. Designed for low-latency matching and microsecond-level performance measurement.',
+    technologies: ['C++', 'Low-Latency', 'Lock-Free', 'Memory Optimization', 'Trading Systems'],
     image: '⚡',
     github: 'https://github.com/Arjunkocharla/matching_engine',
     live: '',
+  },
+  {
+    title: 'DCrypto — Financial Asset Management',
+    description:
+      'Full-stack financial services web application for cryptocurrency portfolio tracking and management. Built with Python backend, real-time data processing, SQL Server/PostgreSQL for data persistence, and React frontend. Features real-time portfolio tracking, transaction history, and data visualization.',
+    technologies: ['Python', 'React', 'SQL Server', 'PostgreSQL', 'Financial Tech', 'Backend'],
+    image: '💰',
+    github: 'https://github.com/Arjunkocharla/DCrypto',
+    live: 'https://dcrpyto.com/login',
   },
 ]
 

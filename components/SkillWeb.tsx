@@ -2,11 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { X } from 'lucide-react'
 
 interface Skill {
   name: string
   level: number
   category: string
+  usage?: string
   x?: number
   y?: number
   vx?: number
@@ -168,15 +170,26 @@ export default function SkillWeb({ skills }: SkillWebProps) {
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
 
-      skills.forEach((skill) => {
+      let clickedSkill: Skill | null = null
+      for (const skill of skills) {
         const dx = x - (skill.x || 0)
         const dy = y - (skill.y || 0)
         const distance = Math.sqrt(dx * dx + dy * dy)
 
         if (distance < 20) {
-          setSelectedSkill(selectedSkill?.name === skill.name ? null : skill)
+          clickedSkill = skill
+          break
         }
-      })
+      }
+
+      // Toggle: if clicking the same skill, close it; otherwise select the new one
+      if (clickedSkill) {
+        if (selectedSkill?.name === clickedSkill.name) {
+          setSelectedSkill(null)
+        } else {
+          setSelectedSkill(clickedSkill)
+        }
+      }
     }
 
     canvas.addEventListener('mousemove', handleMouseMove)
@@ -193,39 +206,60 @@ export default function SkillWeb({ skills }: SkillWebProps) {
   }, [skills, hoveredSkill, selectedSkill, hasInteracted])
 
   return (
-    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] glass rounded-2xl overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full cursor-pointer"
-      />
-      {!hasInteracted && !selectedSkill && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
-        >
-          <div className="px-4 py-2 rounded-full bg-black/40 backdrop-blur-sm text-xs sm:text-sm text-gray-100 border border-white/10">
-            Hover or tap the nodes to explore my skills.
-          </div>
+    <div className="relative w-full">
+      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] glass rounded-2xl overflow-hidden">
+        <canvas
+          ref={canvasRef}
+          className="w-full h-full cursor-pointer"
+          style={{ position: 'relative', zIndex: 0 }}
+        />
+        {!hasInteracted && !selectedSkill && (
           <motion.div
-            className="mt-3 flex items-center gap-2 text-[11px] sm:text-xs text-gray-300"
-            animate={{ opacity: [0.4, 1, 0.4], y: [0, -3, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+            style={{ zIndex: 10 }}
           >
-            <span>Interactive skill web</span>
+            <div className="px-4 py-2 rounded-full bg-black/40 backdrop-blur-sm text-xs sm:text-sm text-gray-100 border border-white/10">
+              Hover or tap the nodes to explore my skills.
+            </div>
+            <motion.div
+              className="mt-3 flex items-center gap-2 text-[11px] sm:text-xs text-gray-300"
+              animate={{ opacity: [0.4, 1, 0.4], y: [0, -3, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <span>Interactive skill web</span>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      )}
+        )}
+      </div>
       {selectedSkill && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 glass px-6 py-4 rounded-lg max-w-md"
+          exit={{ opacity: 0, y: 20 }}
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 glass px-4 sm:px-6 py-3 sm:py-4 rounded-lg max-w-md mx-4 z-50 pointer-events-auto"
+          style={{ zIndex: 50 }}
         >
-          <h3 className="text-xl font-bold text-center mb-2 gradient-text">
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              setSelectedSkill(null)
+            }}
+            className="absolute top-2 right-2 p-1 rounded-full hover:bg-white/10 dark:hover:bg-white/10 transition-colors text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white z-10"
+            aria-label="Close"
+          >
+            <X size={16} />
+          </button>
+          <h3 className="text-lg sm:text-xl font-bold text-center mb-2 gradient-text pr-6">
             {selectedSkill.name}
           </h3>
-          <p className="text-sm text-gray-400 dark:text-gray-500 text-center">
+          {selectedSkill.usage && (
+            <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 text-center leading-relaxed mb-2">
+              {selectedSkill.usage}
+            </p>
+          )}
+          <p className="text-xs text-gray-500 dark:text-gray-500 text-center">
             Click on other skills to explore connections
           </p>
         </motion.div>

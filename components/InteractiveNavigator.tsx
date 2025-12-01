@@ -161,7 +161,7 @@ export default function InteractiveNavigator() {
           whileHover={{ scale: 1.1, rotate: 5 }}
           whileTap={{ scale: 0.9 }}
           onClick={handleStart}
-          className="px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full text-white font-bold text-base sm:text-lg shadow-2xl flex items-center gap-2 sm:gap-3 hover:shadow-primary-500/50 transition-all w-full sm:w-auto justify-center"
+          className="px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-600 dark:to-primary-700 rounded-full text-white font-bold text-base sm:text-lg shadow-2xl flex items-center gap-2 sm:gap-3 hover:shadow-primary-500/50 dark:hover:shadow-primary-600/50 transition-all w-full sm:w-auto justify-center"
         >
           <Play size={24} fill="white" />
           <span>Start Tour</span>
@@ -175,10 +175,10 @@ export default function InteractiveNavigator() {
         >
           {/* Header with Close Button */}
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-semibold text-gray-300">Tour Navigator</h3>
+            <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300">Tour Navigator</h3>
             <motion.button
               onClick={handleClose}
-              className="p-2 glass rounded-lg text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-colors"
+              className="p-2 glass rounded-lg text-gray-600 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-500/10 dark:hover:bg-red-500/10 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               title="Close Tour"
@@ -191,7 +191,7 @@ export default function InteractiveNavigator() {
           <div className="flex items-center gap-3 mb-4">
             <motion.button
               onClick={isPlaying ? handlePause : handleStart}
-              className="p-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full text-white"
+              className="p-3 bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-600 dark:to-primary-700 rounded-full text-white"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               title={isPlaying ? 'Pause Tour' : 'Resume Tour'}
@@ -200,7 +200,7 @@ export default function InteractiveNavigator() {
             </motion.button>
             <motion.button
               onClick={handleNext}
-              className="p-3 glass rounded-full text-white hover:bg-white/10"
+              className="p-3 glass rounded-full text-gray-700 dark:text-white hover:bg-white/10 dark:hover:bg-white/10"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -224,8 +224,8 @@ export default function InteractiveNavigator() {
                 onClick={() => handleSectionClick(index)}
                 className={`flex-1 p-3 rounded-lg text-center transition-all relative overflow-hidden ${
                   index === currentIndex
-                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white'
-                    : 'glass text-gray-300 hover:bg-white/10'
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-600 dark:to-primary-700 text-white'
+                    : 'glass text-gray-700 dark:text-gray-300 hover:bg-white/10 dark:hover:bg-white/10'
                 }`}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -275,7 +275,7 @@ export default function InteractiveNavigator() {
               exit={{ opacity: 0, y: -10 }}
               className="mt-4 text-center"
             >
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
                 {sections[currentIndex].description}
               </p>
             </motion.div>
@@ -305,16 +305,16 @@ export default function InteractiveNavigator() {
                   }}
                   className={`w-full p-4 rounded-lg text-left flex items-center gap-3 transition-all ${
                     index === currentIndex
-                      ? 'bg-primary-500/20 border-2 border-primary-500'
-                      : 'glass hover:bg-white/10'
+                      ? 'bg-primary-500/20 dark:bg-primary-500/30 border-2 border-primary-500'
+                      : 'glass hover:bg-white/10 dark:hover:bg-white/10'
                   }`}
                   whileHover={{ x: 5, scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="text-2xl">{section.icon}</span>
                   <div>
-                    <div className="font-semibold text-white">{section.name}</div>
-                    <div className="text-xs text-gray-400">{section.description}</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">{section.name}</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">{section.description}</div>
                   </div>
                 </motion.button>
               ))}

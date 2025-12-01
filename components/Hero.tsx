@@ -47,7 +47,7 @@ export default function Hero() {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Arjun Kocharla
+                Nagarjuna Kocharla
               </motion.span>
             </motion.h1>
             <motion.p
@@ -56,7 +56,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Software Engineer · AI & Distributed Systems
+              Software Engineer specializing in .NET, Python, distributed systems, and cloud-native platforms.
             </motion.p>
             <motion.p
               className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto md:mx-0"
@@ -64,8 +64,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              6+ years building high-performance, distributed backend systems, AI-powered tools,
-              and interactive web experiences that turn complex problems into simple, reliable products.
+              I build high-performance backend services, event-driven pipelines, and AI-powered tools using C#, .NET Core, Python, Kafka/Event Hub, SQL Server/PostgreSQL, Docker, Kubernetes, and Azure/AWS.
             </motion.p>
 
             {/* Social Links */}
@@ -138,12 +137,22 @@ export default function Hero() {
             >
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <motion.a
-                  href="#projects"
+                  href="/resumes/Nagarjuna_Kocharla_Resume_Updated.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-primary-600 hover:bg-primary-700 rounded-lg font-semibold text-center transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  View My Work
+                  Download Resume
+                </motion.a>
+                <motion.a
+                  href="#projects"
+                  className="px-8 py-4 glass rounded-lg font-semibold text-center hover:bg-white/10 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View Projects
                 </motion.a>
                 <motion.a
                   href="#contact"
@@ -151,35 +160,8 @@ export default function Hero() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get In Touch
+                  Contact Me
                 </motion.a>
-              </div>
-              {/* Micro CTAs */}
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-gray-600 dark:text-gray-400">
-                <a
-                  href="/resumes/Nagarjuna_Kocharla_Resume_Updated.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline-offset-4 hover:underline"
-                >
-                  Download Resume
-                </a>
-                <span className="hidden sm:inline text-gray-400">•</span>
-                <a
-                  href="mailto:arjunkocharla98@gmail.com"
-                  className="underline-offset-4 hover:underline"
-                >
-                  Email Me
-                </a>
-                <span className="hidden sm:inline text-gray-400">•</span>
-                <a
-                  href="https://www.linkedin.com/in/nagarjuna-kocharla-7982b6162/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline-offset-4 hover:underline"
-                >
-                  LinkedIn
-                </a>
               </div>
             </motion.div>
           </motion.div>

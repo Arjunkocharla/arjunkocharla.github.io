@@ -67,7 +67,7 @@ function getFallbackResponse(userMessage: string): string {
     (lowerMessage.includes('high') && lowerMessage.includes('throughput')) ||
     (lowerMessage.includes('performance') && lowerMessage.includes('backend'))
   ) {
-    return `Yes – Arjun has strong experience with low-latency, high-performance backend systems.
+    return `Yes – Nagarjuna has strong experience with low-latency, high-performance backend systems.
 
 Key examples:
 • Matching Engine (C++): Built a high-performance order matching engine for order book management, focused on efficient algorithms and fast execution.
@@ -84,7 +84,7 @@ He’s comfortable thinking about performance, concurrency, and system design tr
     lowerMessage.includes('currently working') ||
     (lowerMessage.includes('where') && lowerMessage.includes('work'))
   ) {
-    return `Arjun is currently working as a Full Stack Software Engineer at CentrAlert in Charlotte, NC (since 2023).
+    return `Nagarjuna is currently working as a Full Stack Software Engineer at CentrAlert in Charlotte, NC (since 2023).
 
 Previous experience:
 • Software Engineer Intern at CAMP Systems International (2022)
@@ -95,7 +95,7 @@ Would you like to know more about his current role at CentrAlert or previous exp
   }
 
   if (lowerMessage.includes('skill') || lowerMessage.includes('technology')) {
-    return `Arjun is a Full Stack Developer with expertise in:
+    return `Nagarjuna is a Full Stack Developer with expertise in:
 • Frontend: React, Next.js, TypeScript, Three.js, Tailwind CSS
 • Backend: Node.js, Python, Flask, .NET, C#
 • Tools: Docker, Kubernetes, Kafka, SQL, Git
@@ -109,7 +109,7 @@ He's passionate about creating interactive web experiences and solving complex p
     lowerMessage.includes('projects') ||
     lowerMessage.includes('worked on')
   ) {
-    return `Arjun has worked on various projects including:
+    return `Nagarjuna has worked on various projects including:
 • Full-stack web applications
 • 3D interactive dashboards
 • Real-time applications
@@ -119,7 +119,7 @@ Check out the Projects section to see detailed examples! Would you like to know 
   }
 
   if (lowerMessage.includes('experience') || lowerMessage.includes('background')) {
-    return `Arjun is a Software Engineer with 6+ years of experience in both frontend and backend development. He specializes in creating responsive, performant web applications using modern technologies.
+    return `Nagarjuna is a Software Engineer with 6+ years of experience in both frontend and backend development. He specializes in creating responsive, performant web applications using modern technologies.
 
 Current Role: Full Stack Software Engineer at CentrAlert (Charlotte, NC) since 2023
 Previous Experience: 
@@ -131,7 +131,7 @@ He's worked on projects ranging from small startups to enterprise applications, 
   }
 
   if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
-    return `You can reach out to Arjun through:
+    return `You can reach out to Nagarjuna through:
 • The contact form on this website
 • Email (check the contact section)
 • Social media links in the navigation
@@ -139,7 +139,7 @@ He's worked on projects ranging from small startups to enterprise applications, 
 He's always open to discussing new projects and opportunities!`
   }
 
-  return `I'm here to help answer questions about Arjun's skills, experience, and projects. You can ask about:
+  return `I'm here to help answer questions about Nagarjuna's skills, experience, and projects. You can ask about:
 • Technical skills and technologies
 • Projects and work experience
 • Background and expertise

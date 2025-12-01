@@ -18,7 +18,7 @@ interface AIChatbotProps {
 // Resume context - resume is available at /resumes/Nagarjuna_Kocharla_Resume_Updated.pdf
 const RESUME_CONTEXT = `
 Resume is available at: /resumes/Nagarjuna_Kocharla_Resume_Updated.pdf
-You can reference this resume for detailed information about Arjun's experience, education, and projects.
+You can reference this resume for detailed information about Nagarjuna's experience, education, and projects.
 Key highlights:
 - 6+ years of software engineering experience
 - Full Stack Developer with expertise in multiple technologies
@@ -45,7 +45,7 @@ export default function AIChatbot({ resumeContext = RESUME_CONTEXT }: AIChatbotP
     {
       id: '1',
       role: 'assistant',
-      content: "Hi! I'm here to answer questions about Arjun's skills, experience, and projects. What would you like to know?",
+      content: "Hi! I'm here to answer questions about Nagarjuna's skills, experience, and projects. What would you like to know?",
       timestamp: new Date(),
     },
   ])
@@ -68,7 +68,7 @@ export default function AIChatbot({ resumeContext = RESUME_CONTEXT }: AIChatbotP
     }
   }, [isOpen])
 
-  const defaultContext = `You are a helpful assistant representing Arjun Kocharla (Nagarjuna Kocharla), a Software Engineer with 6+ years of experience. 
+  const defaultContext = `You are a helpful assistant representing Nagarjuna Kocharla, a Software Engineer with 6+ years of experience. 
 
 Key Information:
 - Software Engineer with 6+ years of experience building high performance applications
@@ -87,7 +87,7 @@ Key Information:
 
 ${resumeContext ? `Additional Context:\n${resumeContext}` : ''}
 
-Answer questions about Arjun's skills, experience, and capabilities in a friendly, professional manner. Keep responses concise but informative. For detailed information, reference the resume available at /resumes/Nagarjuna_Kocharla_Resume_Updated.pdf`
+Answer questions about Nagarjuna's skills, experience, and capabilities in a friendly, professional manner. Keep responses concise but informative. For detailed information, reference the resume available at /resumes/Nagarjuna_Kocharla_Resume_Updated.pdf`
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return
@@ -158,7 +158,7 @@ Answer questions about Arjun's skills, experience, and capabilities in a friendl
         const lowerMessage = userMessage.toLowerCase()
 
         if (lowerMessage.includes('skill') || lowerMessage.includes('technology')) {
-          return `Arjun is a Software Engineer with 6+ years of experience and expertise in:
+          return `Nagarjuna is a Software Engineer with 6+ years of experience and expertise in:
 • Frontend: React, Next.js, Flutter, Angular, JavaScript/TypeScript
 • Backend: C#, C++, Python, Node.js
 • Machine Learning: Neural Networks, NLP, Data Analysis
@@ -168,7 +168,7 @@ He's passionate about creating interactive web experiences and solving complex p
         }
 
         if (lowerMessage.includes('project') || lowerMessage.includes('work')) {
-          return `Arjun has worked on various projects including:
+          return `Nagarjuna has worked on various projects including:
 • DCrypto - Financial Asset Management Application
 • Resume Helper AI - AI-powered resume optimization
 • Matching Engine - High-performance C++ order matching system
@@ -178,7 +178,7 @@ Check out the Projects section to see detailed examples! Would you like to know 
         }
 
         if (lowerMessage.includes('experience') || lowerMessage.includes('background')) {
-          return `Arjun is a Software Engineer with 6+ years of experience in both frontend and backend development. He specializes in creating responsive, performant web applications using modern technologies.
+          return `Nagarjuna is a Software Engineer with 6+ years of experience in both frontend and backend development. He specializes in creating responsive, performant web applications using modern technologies.
 
 Current Role: Full Stack Software Engineer at CentrAlert (Charlotte, NC) since 2023
 Previous Experience: 
@@ -190,7 +190,7 @@ He's worked on projects ranging from small startups to enterprise applications, 
         }
 
         if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
-          return `You can reach out to Arjun through:
+          return `You can reach out to Nagarjuna through:
 • The contact form on this website
 • Email: arjunkocharla98@gmail.com
 • Phone: 973-975-8193
@@ -201,7 +201,7 @@ He's worked on projects ranging from small startups to enterprise applications, 
 He's always open to discussing new projects and opportunities!`
         }
 
-        return `I'm here to help answer questions about Arjun's skills, experience, and projects. You can ask about:
+        return `I'm here to help answer questions about Nagarjuna's skills, experience, and projects. You can ask about:
 • Technical skills and technologies
 • Projects and work experience
 • Background and expertise
@@ -292,7 +292,7 @@ What would you like to know?`
                 </div>
                 <div>
                   <h3 className="font-bold text-white">Ask Me Anything</h3>
-                  <p className="text-xs text-gray-400">About Arjun's work</p>
+                  <p className="text-xs text-gray-400">About Nagarjuna's work</p>
                 </div>
               </div>
               <button

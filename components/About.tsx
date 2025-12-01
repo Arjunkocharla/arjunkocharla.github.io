@@ -132,25 +132,25 @@ export default function About() {
             <div className="space-y-4">
               {[
                 {
-                  role: 'Full Stack Software Engineer',
+                  role: 'Software Engineer',
                   company: 'CentrAlert · Charlotte, NC',
                   period: '2023 – Present',
                   impact:
-                    'Leading full-stack development of high-availability alerting and monitoring systems.',
-                },
-                {
-                  role: 'Software Engineer Intern',
-                  company: 'CAMP Systems International · Merrimack, NH',
-                  period: '2022',
-                  impact:
-                    'Built features for aviation software, focusing on performance and data reliability.',
+                    'Built a distributed emergency alerting platform using C#, .NET Core, Python, Kafka/Event Hub, SQL Server, and Redis, processing real-time alerts across thousands of counties. Designed high-throughput APIs, Azure Functions, and geospatial matching logic, and led performance, reliability, and cloud-security improvements on Azure.',
                 },
                 {
                   role: 'Software Engineer',
-                  company: 'TCS · Hyderabad, India',
+                  company: 'CAMP Systems International · Merrimack, NH',
+                  period: '2022',
+                  impact:
+                    'Worked on aviation maintenance systems using ASP.NET Core, React, Python, SQL Server/PostgreSQL. Built APIs, data ingestion tools, and reporting features, and optimized database queries and services supporting compliance and operations for aviation clients.',
+                },
+                {
+                  role: 'Software Engineer',
+                  company: 'Tata Consultancy Services · Hyderabad, India',
                   period: '2019 – 2022',
                   impact:
-                    'Worked on large-scale enterprise systems and backend services in a core engineering role.',
+                    'Delivered enterprise backend integrations and ETL workloads in C#, Python, SQL Server/PostgreSQL, Redis, and AngularJS for telecom and finance clients. Built data pipelines, REST APIs, and dashboards, focusing on performance tuning and reliability for high-volume systems.',
                 },
               ].map((item, index) => (
                 <motion.div
