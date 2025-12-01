@@ -140,7 +140,8 @@ export default function Skills() {
             My <ClickableTitle className="gradient-text">Skills</ClickableTitle>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Technologies and tools I work with to bring ideas to life.
+            A map of the technologies I use day-to-day. Hover over the interactive web to explore,
+            or browse the detailed skill cards below.
           </p>
         </motion.div>
 
@@ -149,8 +150,11 @@ export default function Skills() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-16"
+          className="mb-16 space-y-3"
         >
+          <p className="text-sm text-gray-500 dark:text-gray-400 text-center md:text-left">
+            Interactive skill web · hover or tap the nodes to reveal skills and connections.
+          </p>
           <SkillWeb skills={allSkills} />
         </motion.div>
 

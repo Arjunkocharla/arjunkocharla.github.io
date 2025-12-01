@@ -51,12 +51,12 @@ export default function Hero() {
               </motion.span>
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8"
+              className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Software Engineer
+              Software Engineer · AI & Distributed Systems
             </motion.p>
             <motion.p
               className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
@@ -64,7 +64,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              Experienced at building high performance applications, and backend systems.
+              6+ years building high-performance, distributed backend systems, AI-powered tools,
+              and interactive web experiences that turn complex problems into simple, reliable products.
             </motion.p>
 
             {/* Social Links */}
@@ -130,27 +131,56 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              className="flex flex-col gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
             >
-              <motion.a
-                href="#projects"
-                className="px-8 py-4 bg-primary-600 hover:bg-primary-700 rounded-lg font-semibold text-center transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View My Work
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="px-8 py-4 glass rounded-lg font-semibold text-center hover:bg-white/10 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get In Touch
-              </motion.a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <motion.a
+                  href="#projects"
+                  className="px-8 py-4 bg-primary-600 hover:bg-primary-700 rounded-lg font-semibold text-center transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View My Work
+                </motion.a>
+                <motion.a
+                  href="#contact"
+                  className="px-8 py-4 glass rounded-lg font-semibold text-center hover:bg-white/10 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Get In Touch
+                </motion.a>
+              </div>
+              {/* Micro CTAs */}
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-gray-600 dark:text-gray-400">
+                <a
+                  href="/resumes/Nagarjuna_Kocharla_Resume_Updated.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 hover:underline"
+                >
+                  Download Resume
+                </a>
+                <span className="hidden sm:inline text-gray-400">•</span>
+                <a
+                  href="mailto:arjunkocharla98@gmail.com"
+                  className="underline-offset-4 hover:underline"
+                >
+                  Email Me
+                </a>
+                <span className="hidden sm:inline text-gray-400">•</span>
+                <a
+                  href="https://www.linkedin.com/in/nagarjuna-kocharla-7982b6162/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 hover:underline"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </motion.div>
           </motion.div>
 

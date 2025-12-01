@@ -21,6 +21,7 @@ export default function SkillWeb({ skills }: SkillWebProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
   const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null)
+  const [hasInteracted, setHasInteracted] = useState(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -135,6 +136,9 @@ export default function SkillWeb({ skills }: SkillWebProps) {
 
     // Mouse interaction
     const handleMouseMove = (e: MouseEvent) => {
+      if (!hasInteracted) {
+        setHasInteracted(true)
+      }
       const rect = canvas.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
@@ -157,6 +161,9 @@ export default function SkillWeb({ skills }: SkillWebProps) {
     }
 
     const handleClick = (e: MouseEvent) => {
+      if (!hasInteracted) {
+        setHasInteracted(true)
+      }
       const rect = canvas.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
@@ -183,7 +190,7 @@ export default function SkillWeb({ skills }: SkillWebProps) {
         cancelAnimationFrame(animationFrame)
       }
     }
-  }, [skills, hoveredSkill, selectedSkill])
+  }, [skills, hoveredSkill, selectedSkill, hasInteracted])
 
   return (
     <div className="relative w-full h-[500px] glass rounded-2xl overflow-hidden">
@@ -191,6 +198,24 @@ export default function SkillWeb({ skills }: SkillWebProps) {
         ref={canvasRef}
         className="w-full h-full cursor-pointer"
       />
+      {!hasInteracted && !selectedSkill && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+        >
+          <div className="px-4 py-2 rounded-full bg-black/40 backdrop-blur-sm text-xs sm:text-sm text-gray-100 border border-white/10">
+            Hover or tap the nodes to explore my skills.
+          </div>
+          <motion.div
+            className="mt-3 flex items-center gap-2 text-[11px] sm:text-xs text-gray-300"
+            animate={{ opacity: [0.4, 1, 0.4], y: [0, -3, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <span>Interactive skill web</span>
+          </motion.div>
+        </motion.div>
+      )}
       {selectedSkill && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
