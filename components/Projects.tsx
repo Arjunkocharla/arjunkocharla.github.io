@@ -30,7 +30,7 @@ const projects = [
       'Full-stack financial services web application for cryptocurrency portfolio tracking and management. Built with Python backend, real-time data processing, SQL Server/PostgreSQL for data persistence, and React frontend. Features real-time portfolio tracking, transaction history, and data visualization.',
     technologies: ['Python', 'React', 'SQL Server', 'PostgreSQL', 'Financial Tech', 'Backend'],
     image: '💰',
-    github: 'https://github.com/Arjunkocharla/DCrypto',
+    github: 'https://github.com/Arjunkocharla/Crypto-Currency-Tracking-Visualization-App',
     live: 'https://dcrpyto.com/login',
   },
 ]
